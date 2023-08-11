@@ -11,23 +11,23 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-async function connect(msg) {
+async function completion(msg) {
     try {
-        const chatCompletion = await openai.createChatCompletion({
+        const response = await openai.createChatCompletion({
             model: "gpt-3.5-turbo",
             messages: [
                 {
                     role: "user",
-                    content: "hello",
+                    content: msg,
                 },
             ],
+            max_tokens: 100,
         });
+        return response.data.choices;
     } catch (err) {
         console.log(err);
     }
 }
-
-connect();
 
 const app = new Express();
 app.use(Express.json());
@@ -35,16 +35,18 @@ app.use(Express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(Express.static("public"));
 
-//const indexfile = fs.readFileSync(__dirname + "/public/index.html");
-
 app.get("/", (request, response) =>
     response.end(fs.readFileSync(__dirname + "/public/index.html"))
 );
 app.post("/askBot", async (request, response) => {
-    const question = request.body.question;
-    const chatResponse = await connect(question);
-    console.log(chatResponse);
-    response.status(200);
+    const question = request.body.message;
+    try {
+        const chatResponse = await completion(question);
+        const message = chatResponse[0]["message"];
+        response.status(200).json(message);
+    } catch (error) {
+        response.status(400).json({ error: "Error getting completion" });
+    }
 });
 
 app.listen("8000", "localhost", () =>

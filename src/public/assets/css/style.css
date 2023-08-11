@@ -1,3 +1,11 @@
+:root {
+    --light-pink-color: rgb(224, 129, 175);
+    --light-blue-color: rgb(211, 238, 255);
+    --main-pink-color: rgb(225, 49, 133);
+    --secondary-blue-color: rgb(108, 196, 250);
+    --dark-pink-color: rgb(153, 8, 78);
+    --dark-blue-color: rgb(56, 130, 176);
+}
 * {
     box-sizing: border-box;
     padding: 0;
@@ -18,10 +26,11 @@ section {
 }
 .blackboard > li {
     list-style: none;
+    padding: 0.15rem 0.25rem;
 }
 .blackboard > li.user {
     background: rgb(230, 230, 255);
 }
-.blackboard > li.bot {
+.blackboard > li.assistant {
     background: rgb(252, 220, 227);
 }

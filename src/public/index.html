@@ -11,14 +11,11 @@
             <header>
                 <h1>Prototipo Chat IA</h1>
             </header>
-            <form action="askBot" method="POST">
-                <input type="text" name="question" />
-                <button>preguntar</button>
-            </form>
-            <ul class="blackboard">
-                <li class="user">hola</li>
-                <li class="bot">adios</li>
-            </ul>
+            <div action="askBotWrapper">
+                <input type="text" id="question" />
+                <button class="ask-btn">preguntar</button>
+            </div>
+            <ul class="blackboard"></ul>
         </section>
         <script src="./assets/js/script.js"></script>
     </body>
