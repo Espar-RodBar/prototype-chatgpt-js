@@ -1,6 +1,6 @@
-const http = require("http");
 const fs = require("fs");
 const Express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 
 const { Configuration, OpenAIApi } = require("openai");
@@ -11,28 +11,41 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-async function connect() {
-    const chatCompletion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [
-            {
-                role: "user",
-                content:
-                    "Hello, you are a frontend developer, what kind of tecnology can you use for web development?",
-            },
-        ],
-    });
-    console.log(chatCompletion.data.choices[0].message);
+async function connect(msg) {
+    try {
+        const chatCompletion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [
+                {
+                    role: "user",
+                    content: "hello",
+                },
+            ],
+        });
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 connect();
 
 const app = new Express();
+app.use(Express.json());
+app.use(Express.urlencoded({ extended: true }));
+app.use(cors());
+app.use(Express.static("public"));
 
-const indexfile = fs.readFileSync(__dirname + "/public/index.html");
+//const indexfile = fs.readFileSync(__dirname + "/public/index.html");
 
-app.get("/", (request, response) => response.end(indexfile));
-app.post("/msg", (request, response) => {});
+app.get("/", (request, response) =>
+    response.end(fs.readFileSync(__dirname + "/public/index.html"))
+);
+app.post("/askBot", async (request, response) => {
+    const question = request.body.question;
+    const chatResponse = await connect(question);
+    console.log(chatResponse);
+    response.status(200);
+});
 
 app.listen("8000", "localhost", () =>
     console.log(`Server runnig on port 8000`)

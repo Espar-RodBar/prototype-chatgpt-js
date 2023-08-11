@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+section {
+    max-width: 40rem;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blackboard {
+    padding: 1rem;
+    width: 40rem;
+    height: 80%;
+    background: rgb(233, 233, 233);
+}
+.blackboard > li {
+    list-style: none;
+}
+.blackboard > li.user {
+    background: rgb(230, 230, 255);
+}
+.blackboard > li.bot {
+    background: rgb(252, 220, 227);
+}
