@@ -1,7 +1,11 @@
 const fs = require("fs");
 const Express = require("express");
+const morgan = require("morgan");
+const ejs = require("ejs");
+const connectDB = require("./config/db");
+
 const cors = require("cors");
-require("dotenv").config();
+require("dotenv").config({ path: "./config/config.env" });
 
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
@@ -32,6 +36,7 @@ async function completion(msg) {
 const app = new Express();
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
+app.use(morgan("dev"));
 app.use(cors());
 app.use(Express.static("public"));
 
@@ -45,10 +50,11 @@ app.post("/askBot", async (request, response) => {
         const message = chatResponse[0]["message"];
         response.status(200).json(message);
     } catch (error) {
-        response.status(400).json({ error: "Error getting completion" });
+        response
+            .status(400)
+            .json({ error: "Error getting completion" });
     }
 });
 
-app.listen("8000", "localhost", () =>
-    console.log(`Server runnig on port 8000`)
-);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server runnig on port ${PORT}`));

@@ -2,16 +2,27 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../public/assets/css/style.css" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="../public/assets/css/style.css"
+        />
         <title>Prototipo Chat IA</title>
     </head>
     <body>
         <section>
-            <form action="askBot">
-                <input type="text" />
-                <div class="blackboard"></div>
-            </form>
+            <header>
+                <h1>Prototipo Chat IA</h1>
+            </header>
+            <div action="askBotWrapper">
+                <input type="text" id="question" />
+                <button class="ask-btn">preguntar</button>
+            </div>
+            <ul class="blackboard"></ul>
         </section>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
