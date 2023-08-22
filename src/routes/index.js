@@ -5,7 +5,7 @@ const router = express.Router();
 //@route GET /
 
 router.get("/", (request, response) => {
-    response.render("index.ejs");
+    response.render("login.ejs");
 });
 
 //@desc Dashboard

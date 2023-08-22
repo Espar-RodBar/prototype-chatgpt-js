@@ -38,6 +38,8 @@ app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(cors());
+
+// static folder
 app.use(Express.static("public"));
 
 // View Engine
