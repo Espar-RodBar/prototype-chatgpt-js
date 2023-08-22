@@ -40,9 +40,12 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(Express.static("public"));
 
-app.get("/", (request, response) =>
-    response.end(fs.readFileSync(__dirname + "/public/index.html"))
-);
+// View Engine
+app.set("view engine", "ejs");
+
+// Routes
+app.use("/", require("./routes/index"));
+
 app.post("/askBot", async (request, response) => {
     const question = request.body.message;
     try {
