@@ -3,6 +3,7 @@ const inputElement = document.querySelector("#question");
 const ulElement = document.querySelector(".blackboard");
 
 function writeChatMessage(msg, speaker, parentElement) {
+    console.log("write chat mesg");
     // insert li (with a p with text) on the ul
     const newLine = document.createElement("li");
     const text = document.createElement("p");
@@ -20,6 +21,7 @@ function writeChatMessage(msg, speaker, parentElement) {
 }
 
 async function getPrompt(message) {
+    console.log("get Prompt");
     const options = {
         method: "POST",
         body: JSON.stringify({
@@ -30,9 +32,9 @@ async function getPrompt(message) {
         },
     };
     try {
-        const response = await fetch("/askBot", options);
+        const response = await fetch("/", options);
         const data = await response.json();
-        console.log(data);
+        console.log("answer prompt: " + data);
         return data;
     } catch (error) {
         console.error(error);
@@ -40,6 +42,7 @@ async function getPrompt(message) {
 }
 
 async function askHandler() {
+    console.log("askHandler");
     const inputData = inputElement.value;
     writeChatMessage(inputData, "user", ulElement);
     inputElement.value = "";

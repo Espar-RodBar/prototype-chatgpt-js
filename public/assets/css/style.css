@@ -34,3 +34,9 @@ section {
 .blackboard > li.assistant {
     background: rgb(252, 220, 227);
 }
+
+.class-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
