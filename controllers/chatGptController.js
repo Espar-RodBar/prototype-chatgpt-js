@@ -2,7 +2,7 @@ const openai = require("../config/chatGptConfig");
 
 exports.completion = async function (request, response) {
     const msg = request.body.message;
-    console.log("on post: ", msg);
+    console.log("on POST '/': ", msg);
 
     try {
         const answer = await openai.createChatCompletion({

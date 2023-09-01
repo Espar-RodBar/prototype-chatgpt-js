@@ -8,8 +8,6 @@ const configuration = new Configuration({
     apiKey: process.env.APIKEY,
 });
 
-console.log("on GPT Config file:\n", configuration);
-
 const openai = new OpenAIApi(configuration);
 
 module.exports = openai;

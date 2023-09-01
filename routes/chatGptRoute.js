@@ -16,7 +16,6 @@ router.post("/", chatGptController.completion);
 
 //@desc Dashboard
 //@route GET /dashboard
-
 router.get("/dashboard", (request, response) => {
     response.render("dashboard.ejs");
 });
