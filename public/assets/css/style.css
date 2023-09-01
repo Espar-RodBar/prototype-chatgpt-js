@@ -21,7 +21,7 @@ section {
 .blackboard {
     padding: 1rem;
     width: 40rem;
-    height: 80%;
+    min-height: 80%;
     background: rgb(233, 233, 233);
 }
 .blackboard > li {
