@@ -18,10 +18,19 @@ section {
     flex-direction: column;
     align-items: center;
 }
-.blackboard {
+
+section form.ask-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+section form.ask-form .ask-btn {
+    overflow: visible;
+}
+section ul.blackboard {
     padding: 1rem;
     width: 40rem;
-    min-height: 80%;
+    min-height: 30rem;
     background: rgb(233, 233, 233);
 }
 .blackboard > li {

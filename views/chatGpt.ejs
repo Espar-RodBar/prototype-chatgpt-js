@@ -15,8 +15,20 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
       defer
     ></script>
-
-    <title>Chat IA JS</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Prototipo Chat IA</title>
   </head>
-  <body></body>
+  <body>
+    <section>
+      <header>
+        <h1>Prototipo Chat IA (ejs)</h1>
+      </header>
+      <form class="ask-form" action="askBotWrapper">
+        <input type="text" id="question" />
+        <button class="waves-effect waves-light btn ask-btn">preguntar</button>
+      </form>
+      <ul class="blackboard"></ul>
+    </section>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
