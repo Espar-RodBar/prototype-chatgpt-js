@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const chatGptController = require('../controllers/chatGptController')
+const chatGptController = require('../controllers/messages')
 
 // @desc Login/landing page
 // @route GET /
 
 router.get('/', (request, response) => {
-  response.render('chatGpt.ejs')
+  response.render('messages.ejs')
   // response.render("login.ejs");
 })
 
@@ -16,8 +16,5 @@ router.post('/', chatGptController.completion)
 
 // @desc Dashboard
 // @route GET /dashboard
-router.get('/dashboard', (request, response) => {
-  response.render('dashboard.ejs')
-})
 
 module.exports = router
