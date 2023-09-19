@@ -33,22 +33,14 @@
             </header>
             <div class="card">
                 <div class="class-content">
-                    <h3>
-                        <i class="material-icons medium">memory</i>
-                        Ready to ask?
-                    </h3>
-                    <div class="section">
-                        <p class="lead">Create a chat</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="section">
-                        <a href="" class="btn red darken-1"
-                            ><i class="fab fa-google left"></i>Log
-                        </a>
+                    <form action="/login" method="POST">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="password" placeholder="Password">
+                        <input type="submit">
+                    </form>
                     </div>
                 </div>
             </div>
         </main>
-        <script src="./assets/js/script.js"></script>
     </body>
 </html>
