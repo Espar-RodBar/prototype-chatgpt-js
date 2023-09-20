@@ -1,5 +1,9 @@
 const openai = require('../config/chatGptConfig')
 
+exports.messages = (request, response) => {
+  response.render('messages.ejs')
+}
+
 exports.completion = async function (request, response) {
   const msg = request.body.message
   console.log("on POST '/': ", msg)
