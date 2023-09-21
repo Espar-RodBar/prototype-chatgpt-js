@@ -2,9 +2,17 @@
 const express = require('express')
 const app = express()
 
-require('dotenv').config({
+const dotenv = require('dotenv')
+dotenv.config({
   path: './config/.env',
 })
+
+if (!process.env.NODE_ENV) {
+  console.log('no environtmen')
+  dotenv.config({
+    path: '.env',
+  })
+}
 
 // mongoose
 const mongoose = require('mongoose')
@@ -56,6 +64,9 @@ app.use(passport.session())
 // Routes
 app.use('/messages', chatGptRoute)
 app.use('/', indexroute)
+
+// test env.
+console.log()
 
 const PORT = process.env.PORT || 3005
 app.listen(PORT, () => console.log(`Server runnig on port ${PORT}`))
