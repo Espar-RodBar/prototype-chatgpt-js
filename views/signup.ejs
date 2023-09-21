@@ -2,20 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    />
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        defer
+    ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Prototipo Chat IA Login</title>
   <body>
-    <form action="/signup" method="POST">
-      <input type="text" name="userName" placeholder="User Name" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="password" name="password" placeholder="Password" />
-      <input
-        type="password"
-        name="confirmPassword"
-        placeholder="Confirm Password"
-      />
-      <input type="submit" />
-    </form>
+    <header class="navbar-fixed">
+      <nav class="nav-wrapper">
+        <a href="/" class="brand-logo center">Chat IA JS</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/login">login</a></li>
+          <li><a href="/signup">sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container section row">
+        <form action="/signup" method="POST">
+          <input type="text" name="userName" placeholder="User Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+          />
+          <input type="submit" />
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <ul>
+          <li>Developed by Espar-RodBar</li>
+          <li><a href="#">Github repository</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

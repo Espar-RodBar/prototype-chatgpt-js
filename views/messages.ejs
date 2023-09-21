@@ -19,17 +19,31 @@
     <title>Prototipo Chat IA</title>
   </head>
   <body>
+    <header class="navbar-fixed">
+      <nav class="nav-wrapper">
+        <a href="" class="brand-logo center">Chat IA JS</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="./logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
     <section>
-      <header>
-        <h1>Prototipo Chat IA (ejs)</h1>
-        <p><a href="./logout">Logout</a></p>
-      </header>
       <form class="ask-form" action="askBotWrapper">
         <input type="text" id="question" />
         <button class="waves-effect waves-light btn ask-btn">preguntar</button>
       </form>
       <ul class="blackboard"></ul>
+    </main>
     </section>
+    <footer class="page-footer">
+      <div class="container">
+        <ul>
+          <li>Developed by Espar-RodBar</li>
+          <li><a href="#">Github repository</a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

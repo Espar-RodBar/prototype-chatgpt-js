@@ -1,51 +1,22 @@
 :root {
-    --light-pink-color: rgb(224, 129, 175);
-    --light-blue-color: rgb(211, 238, 255);
-    --main-pink-color: rgb(225, 49, 133);
-    --secondary-blue-color: rgb(108, 196, 250);
-    --dark-pink-color: rgb(153, 8, 78);
-    --dark-blue-color: rgb(56, 130, 176);
+  --light-pink-color: rgb(224, 129, 175);
+  --light-blue-color: rgb(211, 238, 255);
+  --main-pink-color: rgb(225, 49, 133);
+  --secondary-blue-color: rgb(108, 196, 250);
+  --dark-pink-color: rgb(153, 8, 78);
+  --dark-blue-color: rgb(56, 130, 176);
 }
 * {
-    box-sizing: border-box;
-    padding: 0;
-}
-section {
-    max-width: 40rem;
-    min-height: 80vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-section form.ask-form {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-section form.ask-form .ask-btn {
-    overflow: visible;
-}
-section ul.blackboard {
-    padding: 1rem;
-    width: 40rem;
-    min-height: 30rem;
-    background: rgb(233, 233, 233);
-}
-.blackboard > li {
-    list-style: none;
-    padding: 0.15rem 0.25rem;
-}
-.blackboard > li.user {
-    background: rgb(230, 230, 255);
-}
-.blackboard > li.assistant {
-    background: rgb(252, 220, 227);
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.class-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+main {
+  flex: 1 0 auto;
 }

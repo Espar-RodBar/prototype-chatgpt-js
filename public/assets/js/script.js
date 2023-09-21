@@ -33,6 +33,7 @@ async function getPrompt(message) {
   }
   try {
     const response = await fetch('/messages', options)
+    console.log(response)
     const data = await response.json()
     console.log('answer prompt: ' + data)
     return data
