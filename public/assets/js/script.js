@@ -3,7 +3,6 @@ const inputElement = document.querySelector('#question')
 const ulElement = document.querySelector('.blackboard')
 
 function writeChatMessage(msg, speaker, parentElement) {
-  console.log('write chat mesg')
   // insert li (with a p with text) on the ul
   const newLine = document.createElement('li')
   const text = document.createElement('p')
@@ -33,9 +32,8 @@ async function getPrompt(message) {
   }
   try {
     const response = await fetch('/messages', options)
-    console.log(response)
     const data = await response.json()
-    console.log('answer prompt: ' + data)
+
     return data
   } catch (error) {
     console.error(error)

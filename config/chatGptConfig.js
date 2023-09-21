@@ -6,9 +6,4 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration)
 
-console.log(
-  'configChatgpt importing environtment keys: ',
-  process.env.APIKEY_CHATGPT
-)
-
 module.exports = openai

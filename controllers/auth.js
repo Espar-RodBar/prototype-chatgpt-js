@@ -19,7 +19,6 @@ exports.postLogin = (req, res, next) => {
   }
 
   if (validationErrors.length) {
-    console.log('on POST login errors: ', validationErrors)
     return res.redirect('/login')
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
@@ -39,14 +38,13 @@ exports.postLogin = (req, res, next) => {
       if (err) {
         return next(err)
       }
-      console.log('On POST login:', 'success, logged')
+
       res.redirect(req.session.returnTo || '/messages')
     })
   })(req, res, next)
 }
 
 exports.logout = (req, res) => {
-  console.log('auth.js fn:logout')
   req.logout(() => {
     console.log('User has logged out.')
   })
