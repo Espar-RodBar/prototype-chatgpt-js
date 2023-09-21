@@ -21,6 +21,7 @@ exports.completion = async function (request, response) {
     })
 
     const message = answer.data.choices[0].message
+    console.log(message)
     response.status(200).json(message)
   } catch (err) {
     response.status(400).json({ error: 'Error getting completion' })

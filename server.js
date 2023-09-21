@@ -2,6 +2,10 @@
 const express = require('express')
 const app = express()
 
+require('dotenv').config({
+  path: './config/.env',
+})
+
 // mongoose
 const mongoose = require('mongoose')
 const passport = require('passport')
@@ -14,11 +18,6 @@ const morgan = require('morgan')
 const connectDB = require('./config/database')
 const indexroute = require('./routes/index')
 const chatGptRoute = require('./routes/messages')
-
-require('dotenv').config({
-  path: __dirname + '/config/.env',
-  debug: true,
-})
 
 connectDB()
 

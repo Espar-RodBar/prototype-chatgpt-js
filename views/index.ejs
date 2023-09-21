@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="../public/assets/css/style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
       defer
@@ -19,8 +20,35 @@
     <title>Chat IA JS</title>
   </head>
   <body>
-    <h1>Chat IA JS</h1>
-    <a href="/login">login</a>
-    <a href="/signup">sign up</a>
+    <header class="navbar-fixed">
+      <nav class="nav-wrapper">
+        <a href="/" class="brand-logo center">Chat IA JS</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="/login">login</a></li>
+          <li><a href="/signup">sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container section row">
+        <header class="header"><h1>h1</h1></header>
+        <h2 class="col s12 center-align">Instrucctions:</h2>
+        <p class="col s12 center-align">
+          First sign up, or enter your email and password when login in.
+        </p>
+        <p class="col s12 center-align">
+          Ask what you want to the chatbot. It's based at the moment by
+          chatGPT-3plus
+        </p>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <ul>
+          <li>Developed by Espar-RodBar</li>
+          <li><a href="#">Github repository</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
