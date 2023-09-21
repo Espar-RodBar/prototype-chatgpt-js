@@ -1,6 +1,6 @@
 :root {
-  --light-pink-color: rgb(224, 129, 175);
-  --light-blue-color: rgb(211, 238, 255);
+  --light-pink-color: rgba(224, 129, 175, 0.5);
+  --light-blue-color: rgba(211, 238, 255, 0.5);
   --main-pink-color: rgb(225, 49, 133);
   --secondary-blue-color: rgb(108, 196, 250);
   --dark-pink-color: rgb(153, 8, 78);
@@ -19,4 +19,18 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+.blackboard {
+  max-height: 40rem;
+  min-height: 20rem;
+}
+
+.user {
+  padding: 0.5rem;
+  background: var(--light-blue-color);
+}
+
+.assistant {
+  padding: 0.5rem;
+  background: var(--light-pink-color);
 }

@@ -28,14 +28,21 @@
       </nav>
     </header>
     <main>
-    <section>
-      <form class="ask-form" action="askBotWrapper">
-        <input type="text" id="question" />
-        <button class="waves-effect waves-light btn ask-btn">preguntar</button>
-      </form>
-      <ul class="blackboard"></ul>
+      <section class="container section row">
+        <div class="card">
+          <form class="ask-form row" action="askBotWrapper">
+            <input class="col s9" type="text" id="question" />
+            <button class="waves-effect waves-light btn ask-btn col s3">
+              preguntar
+            </button>
+          </form>
+        </div>
+        <div class="divider"></div>
+        <div class="card">
+          <ul class="blackboard"></ul>
+        </div>
+      </section>
     </main>
-    </section>
     <footer class="page-footer">
       <div class="container">
         <ul>
