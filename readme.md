@@ -2,9 +2,7 @@
 
 This webapp let you ask to ChatGpt3.5 all that you want.
 
-**Link to project:** http://...
-
-![alt tag](http://...)
+**Link to project:** https://prototype-chatgpt-js.onrender.com/
 
 ## How It's Made:
 
@@ -14,7 +12,7 @@ With the ascending of all the chatbots (chatGpt, Bing, Bard and so on..) it is a
 
 ## Optimizations
 
-I implemented a login/logout and session in the app, but needs to be improved, updated and refactored to work in the more recent updates. At the moment only works in localhost.
+I implemented a login/logout and session in the app, but needs to be improved, updated and refactored to work in the more recent updates.
 
 ## Instalation:
 
