@@ -21,7 +21,6 @@ main {
   flex: 1 0 auto;
 }
 .blackboard {
-  max-height: 40rem;
   min-height: 20rem;
 }
 
