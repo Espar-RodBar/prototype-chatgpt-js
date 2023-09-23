@@ -1,10 +1,10 @@
-process.on('uncaughtException', function (err) {
-  console.log(err)
-})
-
 /* eslint-disable n/no-path-concat */
 const express = require('express')
 const app = express()
+
+process.on('uncaughtException', function (err) {
+  console.log(err)
+})
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config({
