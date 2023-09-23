@@ -32,4 +32,3 @@ The project is implemented in NodeJs, with Express to connect to a database (Mon
 I use the openAi API to make queries with the chatbots. It is limited to a few tokens, just enough to check the functionality of the app.
 
 Finally, I use the library for the views -ejs-, due to its simplicity of use (it is like html and javascript)
-Abrir en el Traductor de Google

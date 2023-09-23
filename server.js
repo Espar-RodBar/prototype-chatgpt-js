@@ -2,16 +2,8 @@
 const express = require('express')
 const app = express()
 
-const dotenv = require('dotenv')
-
-if (process.env.NODE_ENV) {
-  console.log('production env')
-  dotenv.config({
-    path: '.env',
-  })
-} else {
-  console.log('development env')
-  dotenv.config({
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({
     path: './config/.env',
   })
 }
