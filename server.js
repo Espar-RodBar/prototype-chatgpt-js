@@ -1,3 +1,7 @@
+process.on('uncaughtException', function (err) {
+  console.log(err)
+})
+
 /* eslint-disable n/no-path-concat */
 const express = require('express')
 const app = express()
@@ -62,5 +66,5 @@ app.use('/', indexroute)
 // test env.
 console.log()
 
-const PORT = process.env.PORT || 3005
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => console.log(`Server runnig on port ${PORT}`))
